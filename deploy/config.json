@@ -1,0 +1,20 @@
+{
+  "network": "studio-next",
+  "rpc": "https://studio-next.genlayer.com/api",
+  "chainId": 61997,
+  "explorer": "https://explorer-studio-dev.genlayer.com/",
+  "exampleFeed": {
+    "feed_id": "BTC-USD",
+    "decimals": 2,
+    "tolerance_bps": 100,
+    "drift_bps": 50,
+    "min_sources": 3,
+    "min_agree": 2,
+    "sources": [
+      { "url": "https://api.coinbase.com/v2/prices/BTC-USD/spot", "path": "data.amount" },
+      { "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd", "path": "bitcoin.usd" },
+      { "url": "https://api.kraken.com/0/public/Ticker?pair=XBTUSD", "path": "result.XXBTZUSD.c.0" },
+      { "url": "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT", "path": "price" }
+    ]
+  }
+}
